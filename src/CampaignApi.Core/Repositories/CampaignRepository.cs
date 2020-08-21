@@ -13,14 +13,23 @@ namespace CampaignApi.Core.Repositories
         public Campaign Get(Guid id)
             => _campaigns.Single(x => x.Id == id);
 
+        public Campaign Get(string name)
+            => _campaigns.Single(x => x.Name == name);
+
         public void Add(Campaign campaign)
         {
             _campaigns.Add(campaign);
         }
 
-        public void CostsSum()
+        public double Raport()
         {
-            throw new NotImplementedException();
+            double CostsSum = 0;
+            foreach (Campaign campaign in _campaigns)
+            {
+                CostsSum += campaign.Cost;
+            }
+
+            return CostsSum;
         }
 
         public IEnumerable<Campaign> GetAll()
@@ -32,7 +41,7 @@ namespace CampaignApi.Core.Repositories
             _campaigns.Remove(campaign);
         }
 
-        public void Update(Campaign campaign)
+        public void Edit(Campaign campaign)
         {
             throw new System.NotImplementedException();
         }

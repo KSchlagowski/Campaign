@@ -6,10 +6,12 @@ namespace CampaignApi.Core.Repositories.Interfaces
 {
     public interface ICampaignRepository
     {
+        Campaign Get(Guid id);
+        Campaign Get(string name);
         IEnumerable<Campaign> GetAll();
-        void CostsSum();
+        double Raport();
         void Add(Campaign campaign);
         void Remove(Guid id);
-        void Update(Campaign campaign);
+        void Edit(Campaign campaign);
     }
 }

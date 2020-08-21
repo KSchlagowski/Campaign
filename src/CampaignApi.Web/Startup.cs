@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using CampaignApi.Core.Repositories;
+using CampaignApi.Core.Repositories.Interfaces;
 
 namespace CampaignApi.Web
 {
@@ -25,6 +27,7 @@ namespace CampaignApi.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<ICampaignRepository, CampaignRepository>();
             services.AddControllers();
         }
 

@@ -1,8 +1,0 @@
-C:\Users\Kamil\Desktop\Campaign\CampaignApi.Db\bin\Debug\netstandard2.0\CampaignApi.Db.deps.json
-C:\Users\Kamil\Desktop\Campaign\CampaignApi.Db\bin\Debug\netstandard2.0\CampaignApi.Db.dll
-C:\Users\Kamil\Desktop\Campaign\CampaignApi.Db\bin\Debug\netstandard2.0\CampaignApi.Db.pdb
-C:\Users\Kamil\Desktop\Campaign\CampaignApi.Db\obj\Debug\netstandard2.0\CampaignApi.Db.csprojAssemblyReference.cache
-C:\Users\Kamil\Desktop\Campaign\CampaignApi.Db\obj\Debug\netstandard2.0\CampaignApi.Db.AssemblyInfoInputs.cache
-C:\Users\Kamil\Desktop\Campaign\CampaignApi.Db\obj\Debug\netstandard2.0\CampaignApi.Db.AssemblyInfo.cs
-C:\Users\Kamil\Desktop\Campaign\CampaignApi.Db\obj\Debug\netstandard2.0\CampaignApi.Db.dll
-C:\Users\Kamil\Desktop\Campaign\CampaignApi.Db\obj\Debug\netstandard2.0\CampaignApi.Db.pdb
