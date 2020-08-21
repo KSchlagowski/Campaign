@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "CampaignApi.Core/1.0.0": {
+        "dependencies": {
+          "CampaignApi.Db": "1.0.0"
+        },
+        "runtime": {
+          "CampaignApi.Core.dll": {}
+        }
+      },
+      "CampaignApi.Db/1.0.0": {
+        "runtime": {
+          "CampaignApi.Db.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CampaignApi.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CampaignApi.Db/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

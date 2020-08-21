@@ -1,0 +1,11 @@
+C:\Users\Kamil\Desktop\Campaign\src\CampaignApi.Core\bin\Debug\netstandard2.0\CampaignApi.Core.deps.json
+C:\Users\Kamil\Desktop\Campaign\src\CampaignApi.Core\bin\Debug\netstandard2.0\CampaignApi.Core.dll
+C:\Users\Kamil\Desktop\Campaign\src\CampaignApi.Core\bin\Debug\netstandard2.0\CampaignApi.Core.pdb
+C:\Users\Kamil\Desktop\Campaign\src\CampaignApi.Core\bin\Debug\netstandard2.0\CampaignApi.Db.dll
+C:\Users\Kamil\Desktop\Campaign\src\CampaignApi.Core\bin\Debug\netstandard2.0\CampaignApi.Db.pdb
+C:\Users\Kamil\Desktop\Campaign\src\CampaignApi.Core\obj\Debug\netstandard2.0\CampaignApi.Core.csprojAssemblyReference.cache
+C:\Users\Kamil\Desktop\Campaign\src\CampaignApi.Core\obj\Debug\netstandard2.0\CampaignApi.Core.AssemblyInfoInputs.cache
+C:\Users\Kamil\Desktop\Campaign\src\CampaignApi.Core\obj\Debug\netstandard2.0\CampaignApi.Core.AssemblyInfo.cs
+C:\Users\Kamil\Desktop\Campaign\src\CampaignApi.Core\obj\Debug\netstandard2.0\CampaignApi.Core.csproj.CopyComplete
+C:\Users\Kamil\Desktop\Campaign\src\CampaignApi.Core\obj\Debug\netstandard2.0\CampaignApi.Core.dll
+C:\Users\Kamil\Desktop\Campaign\src\CampaignApi.Core\obj\Debug\netstandard2.0\CampaignApi.Core.pdb
