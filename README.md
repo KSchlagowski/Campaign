@@ -1,2 +1,2 @@
 # Campaign
-Advertising campaign - API build for recruitment process 
+Advertising campaign - API built for recruitment process 
