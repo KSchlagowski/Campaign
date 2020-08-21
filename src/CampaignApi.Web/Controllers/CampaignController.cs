@@ -1,24 +1,24 @@
 using CampaignApi.Core.Models;
 using CampaignApi.Core.Repositories.Interfaces;
-using CampaignApi.Db.Models;
 using Microsoft.AspNetCore.Mvc;
-using System;  
-using System.Collections.Generic;  
-using System.Configuration;  
-using System.Data;  
-using System.Data.SqlClient;  
-using System.Web.Mvc;  
-using System.Linq;
-using System.Web;
+using System;
+using System.Data;
+using System.Data.SqlClient;
 
-   
-namespace MvcDatabaseConnectivity_Demo.Controllers  
-{  
+
+namespace MvcDatabaseConnectivity_Demo.Controllers
+{
     [ApiController]
     [Route("api/[controller]")]
     public class CampaignController : Controller
     {  
-        string connectionString = @"Data Source = (local)\sqle2012; Initial Catalog = MvcCrudDB; Integrated Security=True";
+        string connectionString = @"Data Source = (local)\sql; Initial Catalog = sample; Integrated Security=True";
+        private readonly ICampaignRepository _campaignRepository;
+        
+        public CampaignController(ICampaignRepository campaignRepository)
+        {
+            _campaignRepository = campaignRepository;
+        }
        
         [HttpGet]
         public ActionResult Index()
@@ -27,7 +27,7 @@ namespace MvcDatabaseConnectivity_Demo.Controllers
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Product",sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Campaign",sqlCon);
                 sqlDa.Fill(dtblProduct);
             }
             return View(dtblProduct);
@@ -45,7 +45,7 @@ namespace MvcDatabaseConnectivity_Demo.Controllers
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                string query = "INSERT INTO Product VALUES(@Name,@Id,@Cost,@Intensity,@MediaType,@SubjectOfAdvertisement,@Target)";
+                string query = "INSERT INTO Campaign VALUES(@Name,@Id,@Cost,@Intensity,@MediaType,@SubjectOfAdvertisement,@Target)";
                 SqlCommand sqlCmd = new SqlCommand(query,sqlCon);
                 sqlCmd.Parameters.AddWithValue("@Name", campaign.Name);
                 sqlCmd.Parameters.AddWithValue("@Id", campaign.Id);
@@ -60,8 +60,31 @@ namespace MvcDatabaseConnectivity_Demo.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(Campaign campaign)
+        public ActionResult Edit(Guid id)
         {
+            Campaign campaign = new Campaign();
+            DataTable dtblProduct = new DataTable();
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                string query = "SELECT * FROM Campaign Where Id = @Id";
+                SqlDataAdapter sqlDa = new SqlDataAdapter(query,sqlCon);
+                sqlDa.SelectCommand.Parameters.AddWithValue("@Id",id);
+                sqlDa.Fill(dtblProduct);
+            }
+            if (dtblProduct.Rows.Count == 1)
+            {
+                campaign.Name = dtblProduct.Rows[0][0].ToString();
+                campaign.Id = Guid.Parse(dtblProduct.Rows[0][1].ToString());
+                campaign.Cost = Convert.ToDouble(dtblProduct.Rows[0][2].ToString());
+                campaign.Intensity = Convert.ToInt32(dtblProduct.Rows[0][3].ToString());
+                campaign.MediaType = dtblProduct.Rows[0][4].ToString();
+                campaign.SubjectOfAdvertisement = dtblProduct.Rows[0][5].ToString();
+                campaign.Target = dtblProduct.Rows[0][6].ToString();
+
+                return View(campaign);
+            }
+            
             return RedirectToAction("Index");
         }
 
