@@ -2,10 +2,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\CampaignApi.Db\CampaignApi.Db.csproj" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
+
 
 </Project>

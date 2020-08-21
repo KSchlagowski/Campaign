@@ -10,8 +10,8 @@ namespace CampaignApi.Core.Repositories.Interfaces
         Campaign Get(string name);
         IEnumerable<Campaign> GetAll();
         double Raport();
-        void Add(Campaign campaign);
-        void Remove(Guid id);
-        void Edit(Campaign campaign);
+        void Create(Campaign campaign);
+        void Delete(Guid id);
+        void Edit(Guid id);
     }
 }

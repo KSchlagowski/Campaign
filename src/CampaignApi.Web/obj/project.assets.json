@@ -135,23 +135,13 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "CampaignApi.Db": "1.0.0"
+          "System.Data.SqlClient": "4.8.2"
         },
         "compile": {
           "bin/placeholder/CampaignApi.Core.dll": {}
         },
         "runtime": {
           "bin/placeholder/CampaignApi.Core.dll": {}
-        }
-      },
-      "CampaignApi.Db/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/CampaignApi.Db.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CampaignApi.Db.dll": {}
         }
       }
     }
@@ -474,11 +464,6 @@
       "type": "project",
       "path": "../CampaignApi.Core/CampaignApi.Core.csproj",
       "msbuildProject": "../CampaignApi.Core/CampaignApi.Core.csproj"
-    },
-    "CampaignApi.Db/1.0.0": {
-      "type": "project",
-      "path": "../../CampaignApi.Db/CampaignApi.Db.csproj",
-      "msbuildProject": "../../CampaignApi.Db/CampaignApi.Db.csproj"
     }
   },
   "projectFileDependencyGroups": {
