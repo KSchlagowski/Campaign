@@ -6,7 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 
 
-namespace MvcDatabaseConnectivity_Demo.Controllers
+namespace CampaignApi.Web.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
